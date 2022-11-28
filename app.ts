@@ -9,6 +9,12 @@ const txtRes: string[] = []
 type NumOrString = number | string
 type Result = {val: number; timestamp: Date}
 
+interface ResultObj {
+  val: number;
+  timestamp: Date
+}
+
+
 const add = (n1:NumOrString, n2:NumOrString) => {
   if(typeof n1 === 'number' && typeof n2 === 'number')
     return n1 + n2
@@ -17,7 +23,7 @@ const add = (n1:NumOrString, n2:NumOrString) => {
   return +n1 + +n2
 }
 
-const printResult = (resObj: Result) => {
+const printResult = (resObj: ResultObj) => {
   console.log(resObj.val)
 }
 
