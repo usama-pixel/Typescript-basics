@@ -39,3 +39,12 @@ if(btn) {
     console.log(numRes, txtRes)
   })
 }
+
+const myPromise = new Promise<string>((resolve, reject) => {
+  setTimeout(() => {
+    resolve('It worked')
+  }, 1000)
+})
+myPromise.then(res => {
+  console.log(res.split('w'))
+})
