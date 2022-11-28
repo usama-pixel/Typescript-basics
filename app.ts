@@ -7,6 +7,7 @@ const numRes: number[] = []
 const txtRes: string[] = []
 
 type NumOrString = number | string
+type Result = {val: number; timestamp: Date}
 
 const add = (n1:NumOrString, n2:NumOrString) => {
   if(typeof n1 === 'number' && typeof n2 === 'number')
@@ -16,7 +17,7 @@ const add = (n1:NumOrString, n2:NumOrString) => {
   return +n1 + +n2
 }
 
-const printResult = (resObj: {val: number; timestamp: Date}) => {
+const printResult = (resObj: Result) => {
   console.log(resObj.val)
 }
 
